@@ -1,12 +1,7 @@
 ---
-title: "Untitled"
-description: |
-  A new article created using the Distill format.
-author:
-  - name: Nora Jones 
-    url: https://example.com/norajones
-    affiliation: Spacely Sprockets
-    affiliation_url: https://example.com/spacelysprokets
+title: "Exercise #3"
+subtitle: "Fortgeschrittene Statistische Software für NF"
+author: "Finn Liebig (12402643)"
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
