@@ -33,7 +33,7 @@ library(kableExtra)
 
 -   *Arbeit mit der Befehlszeile*: Git selbst besitzt kein ordentliches IDE. Stattdessen muss ein Großteil der Befehle immer über die Befehlszeile eingegeben werden. Das kann umständlich sein. Einige IDEs wie R Studio besitzen integrierte IDEs, diese bilden allerdings nur bedingt die Funktionen von Git ab.
 
--   *Leistung*: Besonders große Projekte mit vielen Dateien und Datenverzweigungen können bei Git Leistungsprobleme hervorrufen. Gerade bei älteren Computern macht sich das dann in der allgemeinen Performance der aktiven Programme zu bemerken und kann eventuell zu Abstürzen führen.
+-   *Leistung*: Besonders große Projekte mit vielen Dateien und Datenverzweigungen können bei Git Leistungsprobleme hervorrufen. Gerade bei älteren Computern macht sich das dann in der allgemeinen Performance der aktiven Programme zu bemerken und kann eventuell zu Abstürzen führen. Des weiteren kann Git nicht im Hintergrund laufen, was ebenfalls mehr Arbeitsspeicher erfordern kann.
 
 ## 3)
 
