@@ -97,6 +97,7 @@ kable(data_comp_table, caption = "Die 10 beliebtesten Namen in München der Jahr
 
 ```{r}
 data_malaria <- read.csv("data/Malaria deaths - IHME (2016).csv")
+data_malaria$Deaths.from.malaria..IHME.2016.
 ```
 
 ### c)
@@ -108,3 +109,12 @@ Link: [https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deat
 ### d)
 
 **Frage: Hat die Anzahl an Malariatoten im Laufe der Jahre (absolut) abgenommen?**
+
+### e)
+
+```{r}
+ggplot(data = data_malaria,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.)) +
+  geom_dot()
+```
