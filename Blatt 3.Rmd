@@ -108,7 +108,7 @@ Link: [https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deat
 
 ### d)
 
-**Frage: Hat die Anzahl an Malariatoten in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre (absolut) abgenommen?**
+**Frage: Gibt es einen positiven oder negativen Trend bei Malariatoten in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre (absolut) abgenommen?**
 
 ### e)
 
@@ -143,6 +143,30 @@ data_malaria_mid_afr_vgl <- data_malaria_mid_afr %>%
   mutate(Aenderung = Deaths.from.malaria..IHME.2016. - lag(Deaths.from.malaria..IHME.2016.))
 kable(data_malaria_mid_afr_vgl)
 ```
+
+```{r}
+data_malaria_angola <- data_malaria_mid_afr_vgl %>%
+filter(Entity == "Angola")
+data_malaria_gabon <- data_malaria_mid_afr_vgl %>%
+group_by(Entity) %>% filter(Entity == "Gabon")
+data_malaria_cameroon <- data_malaria_mid_afr_vgl %>%
+group_by(Entity) %>% filter(Entity == "Cameroon")
+data_malaria_ctr_rep <- data_malaria_mid_afr_vgl %>%
+group_by(Entity) %>% filter(Entity == "Central African Republic")
+data_malaria_chad <- data_malaria_mid_afr_vgl %>%
+group_by(Entity) %>% filter(Entity == "Chad")
+data_malaria_congo <- data_malaria_mid_afr_vgl %>%
+group_by(Entity) %>% filter(Entity == "Congo")
+data_malaria_rep_congo <- data_malaria_mid_afr_vgl %>%
+group_by(Entity) %>% filter(Entity == "Democratic Republic of the Congo")
+data_malaria_rep_eq_guinea <- data_malaria_mid_afr_vgl %>%
+group_by(Entity) %>% filter(Entity == "Equatorial Guinea")
+data_malaria_rep_sao_tome <- data_malaria_mid_afr_vgl %>%
+group_by(Entity) %>% filter(Entity == "Sao Tome and Principe")
+```
+
+
+## f)
 
 ```{r}
 ggplot(data = data_malaria_mid_afr,
