@@ -58,3 +58,12 @@ data_23 <- data_23 %>% mutate(Anzahl = replace_na(Anzahl, 2.5))
 ```
 
 Die Konsequenz dieser Approximation erfolgt trivial. Die Aussagekraft steht und fällt mit der Annahme. Ohne weitere Informationen kann sich diese als grundlegend richtig oder falsch erweisen, was entsprechende Ergebnisse mit dieser Annahme von den tatsächlichen Werten abweichen lassen kann.
+
+### c)
+
+```{r}
+sum(data_22$Anzahl)
+sum(data_23$Anzahl)
+```
+
+Im Jahr 2022 wurden mehr Kinder geboren als im Jahr 2023.
