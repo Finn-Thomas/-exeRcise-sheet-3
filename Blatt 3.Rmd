@@ -80,3 +80,13 @@ data_23 <- data_23 %>% mutate(year = 2023)
 ```{r}
 data_comp <- bind_rows(data_22, data_23)
 ```
+
+### f)
+
+```{r}
+data_comp_table <- data_comp %>%
+  group_by(Vorname) %>%
+  summarize(Total = sum(Anzahl, na.rm = TRUE)) %>%
+  arrange(desc(Total)) %>% slice_head(n=10)
+kable(data_comp_table, caption = "Die 10 beliebtesten Namen in München der Jahre 2022/23 kombiniert")
+```
