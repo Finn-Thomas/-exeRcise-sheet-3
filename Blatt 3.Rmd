@@ -108,7 +108,7 @@ Link: [https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deat
 
 ### d)
 
-**Frage: Hat die Anzahl an Malariatoten in zentralafrikanischen Ländern im Laufe der Jahre (absolut) abgenommen?**
+**Frage: Hat die Anzahl an Malariatoten in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre (absolut) abgenommen?**
 
 ### e)
 
