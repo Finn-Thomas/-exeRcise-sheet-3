@@ -108,7 +108,7 @@ Link: [https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deat
 
 ### d)
 
-**Frage: Gibt es einen positiven oder negativen Trend bei Malariatoten in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre (absolut) abgenommen?**
+**Frage: Wie verhält sich der Trend bei Malariatoten (absolut) in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre von 1990- 2016?**
 
 ### e)
 
@@ -165,6 +165,49 @@ data_malaria_rep_sao_tome <- data_malaria_mid_afr_vgl %>%
 group_by(Entity) %>% filter(Entity == "Sao Tome and Principe")
 ```
 
+```{r}
+library(gridExtra)
+plot_1 <- ggplot(data = data_malaria_angola,
+       aes(x = Year,
+           y = Aenderung))+
+  geom_point()
+plot_2 <- ggplot(data = data_malaria_gabon,
+       aes(x = Year,
+           y = Aenderung))+
+  geom_point()
+plot_3 <- ggplot(data = data_malaria_cameroon,
+       aes(x = Year,
+           y = Aenderung))+
+  geom_point()
+plot_4 <- ggplot(data = data_malaria_ctr_rep,
+       aes(x = Year,
+           y = Aenderung))+
+  geom_point()
+plot_5 <- ggplot(data = data_malaria_chad,
+       aes(x = Year,
+           y = Aenderung))+
+  geom_point()
+plot_6 <- ggplot(data = data_malaria_congo,
+       aes(x = Year,
+           y = Aenderung))+
+  geom_point()
+plot_7 <- ggplot(data = data_malaria_rep_congo,
+       aes(x = Year,
+           y = Aenderung))+
+  geom_point()
+plot_8 <- ggplot(data = data_malaria_rep_eq_guinea,
+       aes(x = Year,
+           y = Aenderung))+
+  geom_point()
+plot_9 <- ggplot(data = data_malaria_rep_sao_tome,
+       aes(x = Year,
+           y = Aenderung))+
+  geom_point()
+grid.arrange(plot_1, plot_2, plot_3, plot_4, plot_5, plot_6, plot_7, plot_8, plot_9, ncol = 3)
+
+```
+
+Wie sich auf den Graphen der jeweiligen Länder leicht erkennen lässt, scheinen 4 der 9 Staaten beinahe keinen Trend bei der absoluten Änderung der Anzahl der Malariatoten im Laufe der Jahre aufzuzeigen. Der Plot in f) verdeutlicht dies. Er zeigt außerdem, dass diese 4 Länder generell fast keine Malariatoten haben. Besonders Angola, Gabon und Kamerun scheinen bis ins Jahr 2005 einen (starken) positiven Trend bei der Änderungsrate aufzuweisen. Bis ungefähr 2011 ist die Änderungsrate negativ. Danach scheint sie sich zu stabilisieren und bleibt weitestgehen konstant. Dazu habe eine Anmerkung: Diese Länder besitzen eine hohe Geburtenrate und damit auch eine stetig wachsende Bevölkerung. Um sinnvoll analysieren zu können, reichen absolute Werte allerdings nicht aus. Die hohe, aber seit einigen Jahren konstante Anzahl an Toten in Kamerun kann einen negativen der relativen Sterberate implizieren, schließlich wächst die Bevölkerung an, die Anzahl der Toten bleibt allerdings gleich. Dazu müssten allerdings weitere Datensätze zur Verfügung stehen. Zur Demokratischen Republik Kongo existieren leider keine Daten.
 
 ## f)
 
@@ -174,4 +217,5 @@ ggplot(data = data_malaria_mid_afr,
            y = Deaths.from.malaria..IHME.2016.,
        color = Entity) )+
   geom_point()
+
 ```
