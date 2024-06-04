@@ -16,6 +16,7 @@ Learn more about using Distill for R Markdown at <https://rstudio.github.io/dist
 
 ```{r}
 library(tidyverse)
+library(kableExtra)
 ```
 
 ## 1)
@@ -97,7 +98,6 @@ kable(data_comp_table, caption = "Die 10 beliebtesten Namen in München der Jahr
 
 ```{r}
 data_malaria <- read.csv("data/Malaria deaths - IHME (2016).csv")
-data_malaria$Deaths.from.malaria..IHME.2016.
 ```
 
 ### c)
@@ -116,5 +116,5 @@ Link: [https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deat
 ggplot(data = data_malaria,
        aes(x = Year,
            y = Deaths.from.malaria..IHME.2016.)) +
-  geom_dot()
+  geom_point()
 ```
