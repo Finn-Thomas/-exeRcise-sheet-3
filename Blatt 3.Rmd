@@ -147,6 +147,7 @@ kable(data_malaria_mid_afr_vgl)
 ```{r}
 ggplot(data = data_malaria_mid_afr,
        aes(x = Year,
-           y = Deaths.from.malaria..IHME.2016.)) +
+           y = Deaths.from.malaria..IHME.2016.,
+       color = Entity) )+
   geom_point()
 ```
