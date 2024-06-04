@@ -18,4 +18,16 @@ Learn more about using Distill for R Markdown at <https://rstudio.github.io/dist
 
 ### d)
 
+**Vorteile**
+
+-   Versionskontrolle: Mithilfe von Git lässt sich die Bearbeitungshistorie des Dokuments zurückverfolgen. Damit ist es nicht nur möglich Back-up Dateien zu erstellen, sondern es ist möglich auf einzelne Arbeitsschritte sprich Änderungen zuzugreifen. Das erleichtert u.a. eventuelle Fehlerbehebungen und stellt eine weitere Sicherheitsvorkehrung beim Speichern des Dokuments dar.
+
+-   Reproduzierbarkeit: Dadurch, dass das Repository geteilt werden kann, ist es möglich, dass Dritte die vorgenommenen Bearbeitungsschritte in ihrem Projekt leichter nachvollziehen können und bei Bedarf auch reproduzieren können. Das fördert den wissenschaftlichen Austausch im allgemeinen ebenso wie die Kontrolle und Verbesserung bei wissenschaftlicher Arbeiten.
+
+**Nachteile**
+
+-   Arbeit mit der Befehlszeile: Git selbst besitzt kein ordentliches IDE. Stattdessen muss ein Großteil der Befehle immer über die Befehlszeile eingegeben werden. Das kann umständlich sein. Einige IDEs wie R Studio besitzen integrierte IDEs, diese bilden allerdings nur bedingt die Funktionen von Git ab.
+
+-   Leistung: Besonders große Projekte mit vielen Dateien und Datenverzweigungen können bei Git Leistungsprobleme hervorrufen. Gerade bei älteren Computern macht sich das dann in der allgemeinen Performance der aktiven Programme zu bemerken und kann eventuell zu Abstürzen führen.
+
 ## 2)
