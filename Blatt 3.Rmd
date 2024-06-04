@@ -108,12 +108,38 @@ Link: [https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deat
 
 ### d)
 
-**Frage: Hat die Anzahl an Malariatoten im Laufe der Jahre (absolut) abgenommen?**
+**Frage: Hat die Anzahl an Malariatoten in zentralafrikanischen Ländern im Laufe der Jahre (absolut) abgenommen?**
 
 ### e)
 
+Unter zentral-/mittelafrikanischen Ländern werden laut der UN geführt:
+
+-   Angola
+
+-   Cameroon
+
+-   Central African Republic
+
+-   Chad
+
+-   Congo
+
+-   Democratic Republic of the Congo
+
+-   Equatorial Guinea
+
+-   Gabon
+
+-   Sao Tome and Principe
+
+Quelle: <https://unstats.un.org/unsd/methodology/m49/>
+
 ```{r}
-ggplot(data = data_malaria,
+data_malaria_mid_afr <- data_malaria %>% filter(Entity %in% c("Angola", "Gabon", "Cameroon", "Central African Republic", "Chad", "Congo", "Democratic Republic of the Congo", "Equatorial Guinea", "Sao Tome and Principe"))
+```
+
+```{r}
+ggplot(data = data_malaria_mid_afr,
        aes(x = Year,
            y = Deaths.from.malaria..IHME.2016.)) +
   geom_point()
