@@ -14,6 +14,10 @@ Distill is a publication format for scientific and technical writing, native to 
 
 Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
 
+```{r}
+library(tidyverse)
+```
+
 ## 1)
 
 ### d)
@@ -30,4 +34,27 @@ Learn more about using Distill for R Markdown at <https://rstudio.github.io/dist
 
 -   *Leistung*: Besonders große Projekte mit vielen Dateien und Datenverzweigungen können bei Git Leistungsprobleme hervorrufen. Gerade bei älteren Computern macht sich das dann in der allgemeinen Performance der aktiven Programme zu bemerken und kann eventuell zu Abstürzen führen.
 
-## 2)
+## 3)
+
+```{r}
+data_23 <- read.csv("data/vornamen-muenchen-2023.csv")
+data_22 <- read.csv("data/open_data_portal_2022.csv")
+```
+
+### b)
+
+```{r}
+data_23$Anzahl <- as.numeric(data_23$Anzahl)
+data_22$Anzahl <- as.numeric(data_22$Anzahl)
+```
+
+Die Variable "Anzahl" ist nicht numerisch, da alle Namen welche maximal vier mal auftreten nicht exakt, sondern mit dem Eintrag/Wert "4 oder weniger" eingetragen werden. Da hier allerdings Buchstaben und keine reinen Zahlensymbole vorkommen, wird diese von R als String aufgefasst. Bei der Umwandlung in numerische Werten, können diese dann nicht umgewandelt werden, was bei den entsprechenden Namen mit NA gekennzeichnet wird.
+
+Um dies zu beheben, gibt es verschiedene Möglichkeiten. Beispielweise könnten alle Spalten mit dem Wert NA entfernt werden. Ich halte es aber für sinnvoller, als Approximation alle NAs durch den Wert 2,5 zu ersetzen. Unter der Annahme, dass genauso viele Namen einfach, zweifach, dreifach und vierfach vorkommen (Namen die nullfach vorkommen, sollten gar nicht in der Liste erscheinen), stellt dies sowohl das arithmetische Mittel als auch den Median eines beliebigen Namens dieser Kategorie dar.
+
+```{r}
+data_22 <- data_22 %>% mutate(Anzahl = replace_na(Anzahl, 2.5))
+data_23 <- data_23 %>% mutate(Anzahl = replace_na(Anzahl, 2.5))
+```
+
+Die Konsequenz dieser Approximation erfolgt trivial. Die Aussagekraft steht und fällt mit der Annahme. Ohne weitere Informationen kann sich diese als grundlegend richtig oder falsch erweisen, was entsprechende Ergebnisse mit dieser Annahme von den tatsächlichen Werten abweichen lassen kann.
