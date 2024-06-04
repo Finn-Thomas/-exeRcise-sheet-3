@@ -98,3 +98,9 @@ kable(data_comp_table, caption = "Die 10 beliebtesten Namen in München der Jahr
 ```{r}
 data_malaria <- read.csv("data/Malaria deaths - IHME (2016).csv")
 ```
+
+### c)
+
+Dataset Name: Malaria deaths - IHME (2016)
+Link: https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deaths%20-%20IHME%20(2016)
+
