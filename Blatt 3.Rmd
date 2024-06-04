@@ -67,3 +67,10 @@ sum(data_23$Anzahl)
 ```
 
 Im Jahr 2022 wurden mehr Kinder geboren als im Jahr 2023.
+
+### d)
+
+```{r}
+data_22 <- data_22 %>% mutate(year = 2022)
+data_23 <- data_23 %>% mutate(year = 2023)
+```
