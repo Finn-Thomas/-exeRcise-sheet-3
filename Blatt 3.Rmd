@@ -139,7 +139,7 @@ data_malaria_mid_afr <- data_malaria %>% filter(Entity %in% c("Angola", "Gabon",
 ```
 
 ```{r}
-data_malaria_mid_afr_vgl <- data_malaria_mid_afr %>%
+data_malaria_mid_afr_vgl <- data_malaria_mid_afr %>% group_by(Entity) %>%
   mutate(Aenderung = Deaths.from.malaria..IHME.2016. - lag(Deaths.from.malaria..IHME.2016.))
 kable(data_malaria_mid_afr_vgl)
 ```
