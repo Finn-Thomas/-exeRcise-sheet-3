@@ -145,6 +145,11 @@ kable(data_malaria_mid_afr_vgl)
 ```
 
 ```{r}
+data_malaria_mid_afr_vgl <- data_malaria_mid_afr_vgl %>% group_by((Entity)) %>% mutate(rel_Aenderung = Aenderung/lag(Aenderung))
+kable(data_malaria_mid_afr_vgl)
+```
+
+```{r}
 data_malaria_angola <- data_malaria_mid_afr_vgl %>%
 filter(Entity == "Angola")
 data_malaria_gabon <- data_malaria_mid_afr_vgl %>%
@@ -341,11 +346,15 @@ plot_91 <- ggplot(data = data_malaria_rep_sao_tome,
 grid.arrange(plot_11, plot_21, plot_31, plot_41, plot_51, plot_61, plot_71, plot_81, plot_91, ncol = 3)
 ```
 
-Die Graphenstruktur der Länder Angola, Kamerun und Kongo ähnelt sich stark. Der Graph der zentralafrikanischen Republik besitzt eine ähnliche Struktur, allerdings gleichen sich die anderen 3 deutlich mehr. Wichtig ist zu beachten, dass die absolute Anzahl der Toten von Land zu Land stark variiert. Dies kann an demographischen Faktoren wie der Bevölkerungsanzahl liegen. Aufgrund des Vergleiches von Jahr zu Jahr innerhalb eines Landes kann die Graphenstruktur trotzdem als Bewertungskriterium von Trendparallelen herangezogen werden. Die Graphenstruktur impliziert Parallelen und Ähnlichkeiten bei der relativen Änderung . Allen gemeinsam ist ein beinahe kontinuierlicher Anstieg der Malariatoten bis hin zum Jahr 2005. Dies lässt sich an beiden Graphen ablesen. Bei Graphen V1 wird dies durch Datenpunkte oberhalb der x-Achse gekennzeichnet. Von 2005 bis ca. 2010 wird die Anzahl der Malariatoten jeweils im Vergleich zum Vorjahr immer geringer. Es liegt also ein negativer Trend vor und die Punkte beim jeweiligen Graph V1 liegen unterhalb der x-Achse. Ab 2010 flachen die jeweiligen Kurven von Angola, Kamerun und Kongo in V2 ab und weisen ab einem gewissen Zeitpunkt beinahe keine Änderung mehr an, sprich die Anzahl an Toten bleibt beinahe gleich (relativ).
+Die relative Änderung liegt in tabellarischer Form vor. Wird sich im folgenden Text darauf bezogen, dann steht das in Einklang mit den Werten der Tabelle.
 
-Bei der zentralafrikanischen Republik hingegen ist bis in das Jahr 2016 ein negativer Trend zu beobachten.
+Die Graphenstruktur der Länder Angola, Kamerun und Kongo ähnelt sich stark. Der Graph der zentralafrikanischen Republik besitzt eine ähnliche Struktur, allerdings gleichen sich die anderen 3 deutlich mehr. Wichtig ist zu beachten, dass die absolute Anzahl der Toten von Land zu Land stark variiert. Dies kann an demographischen Faktoren wie der Bevölkerungsanzahl liegen. Aufgrund des Vergleiches von Jahr zu Jahr innerhalb eines Landes kann die Graphenstruktur trotzdem als Bewertungskriterium von Trendparallelen herangezogen werden. Die Graphenstruktur impliziert Parallelen und Ähnlichkeiten bei der relativen Änderung . Allen gemeinsam ist ein beinahe kontinuierlicher Anstieg der Malariatoten bis hin zum Jahr 2005. Dies lässt sich an beiden Graphen ablesen. Bei Graphen V1 wird dies durch Datenpunkte oberhalb der x-Achse gekennzeichnet. Von 2005 bis ca. 2010 wird die Anzahl der Malariatoten jeweils im Vergleich zum Vorjahr immer geringer. Es liegt also ein negativer Trend vor und die Punkte beim jeweiligen Graph V1 liegen unterhalb der x-Achse. Ab 2010 flachen die jeweiligen Kurven von Angola, Kamerun und Kongo in V2 ab und weisen ab einem gewissen Zeitpunkt beinahe keine Änderung mehr an, sprich die Anzahl an Toten bleibt beinahe gleich (relativ). Bei der zentralafrikanischen Republik hingegen ist bis in das Jahr 2016 ein negativer Trend zu beobachten.
 
-Bei Betrachtung der Graphen V2 von Tschad und Equatorial Guinea fallen ebenfalls Parallelen auf. Beide Graphen
+Bei Betrachtung der Graphen V2 von Tschad und Equatorial Guinea fallen ebenfalls Parallelen auf. Beide Graphen besitzen anfangs einen positiven Trend, welcher ab 2007 (Tschad) bzw. 2005 (Guinea) negativ wird. Nach einer kurzen Negativphase liegen bei beiden Ländern entweder Phasen ohne bzw. mit sehr geringer Änderung vor oder Phasen, die ungefähr um die (pro Land) erst eine positive Änderung und kurz darauf (sprich innerhalb der nächsten 1-2 Jahre) eine beinahe genauso großen negative Änderung aufweisen.
+
+Der Graph V1 von Gabon besitzt wenige Ähnlichkeiten mit denen der anderen Länder. Es gibt beinahe kein Jahr in der es keine Änderung gibt. Zuerst liegt ein positiver Trend vor, welcher von einem stark negativen Trend abgelöst wird. Auf diesen folgt wieder ein positiver und auf diesen wieder ein negativer. Nur im Jahr 2016 ist die relative Änderungsrate beinahe 0.
+
+Der Graph der demokratischen Republik Kongo besteht bis auf das Jahr 2016
 
 ```{r}
 ggplot(data = data_malaria_mid_afr,
