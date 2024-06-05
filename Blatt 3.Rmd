@@ -135,7 +135,7 @@ Unter zentral-/mittelafrikanischen Ländern werden laut der UN geführt:
 Quelle: <https://unstats.un.org/unsd/methodology/m49/>
 
 ```{r}
-data_malaria_mid_afr <- data_malaria %>% filter(Entity %in% c("Angola", "Gabon", "Cameroon", "Central African Republic", "Chad", "Congo", "Democratic Republic of the Congo", "Equatorial Guinea", "Sao Tome and Principe"))
+data_malaria_mid_afr <- data_malaria %>% filter(Entity %in% c("Angola", "Gabon", "Cameroon", "Central African Republic", "Chad", "Congo", "Democratic Republic of Congo", "Equatorial Guinea", "Sao Tome and Principe"))
 ```
 
 ```{r}
@@ -158,7 +158,7 @@ group_by(Entity) %>% filter(Entity == "Chad")
 data_malaria_congo <- data_malaria_mid_afr_vgl %>%
 group_by(Entity) %>% filter(Entity == "Congo")
 data_malaria_rep_congo <- data_malaria_mid_afr_vgl %>%
-group_by(Entity) %>% filter(Entity == "Democratic Republic of the Congo")
+group_by(Entity) %>% filter(Entity == "Democratic Republic of Congo")
 data_malaria_rep_eq_guinea <- data_malaria_mid_afr_vgl %>%
 group_by(Entity) %>% filter(Entity == "Equatorial Guinea")
 data_malaria_rep_sao_tome <- data_malaria_mid_afr_vgl %>%
@@ -251,8 +251,6 @@ plot_9 <- ggplot(data = data_malaria_rep_sao_tome,
 grid.arrange(plot_1, plot_2, plot_3, plot_4, plot_5, plot_6, plot_7, plot_8, plot_9, ncol = 3)
 
 ```
-
-Wie sich auf den Graphen der jeweiligen Länder leicht erkennen lässt, scheinen 4 der 9 Staaten beinahe keinen Trend bei der absoluten Änderung der Anzahl der Malariatoten im Laufe der Jahre aufzuzeigen. Der Plot in f) verdeutlicht dies. Er zeigt außerdem, dass diese 4 Länder generell fast keine Malariatoten haben. Besonders Angola, Gabon und Kamerun scheinen bis ins Jahr 2005 einen (starken) positiven Trend bei der Änderungsrate aufzuweisen. Bis ungefähr 2011 ist die Änderungsrate negativ. Danach scheint sie sich zu stabilisieren und bleibt weitestgehen konstant. Dazu habe eine Anmerkung: Diese Länder besitzen eine hohe Geburtenrate und damit auch eine stetig wachsende Bevölkerung. Um sinnvoll analysieren zu können, reichen absolute Werte allerdings nicht aus. Die hohe, aber seit einigen Jahren konstante Anzahl an Toten in Kamerun kann einen negativen der relativen Sterberate implizieren, schließlich wächst die Bevölkerung an, die Anzahl der Toten bleibt allerdings gleich. Dazu müssten allerdings weitere Datensätze zur Verfügung stehen. Zur Demokratischen Republik Kongo existieren leider keine Daten.
 
 ## f)
 
