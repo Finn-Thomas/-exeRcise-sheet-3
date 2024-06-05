@@ -108,7 +108,7 @@ Link: [https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deat
 
 ### d)
 
-**Frage: Wie verhält sich der Trend bei Malariatoten (absolut) in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre von 1990- 2016?**
+**Frage: Wie verhält sich der Trend bei Malariatoten (absolut) in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre von 1990- 2016 und gibt es Ähnlichkeiten?**
 
 ### e)
 
@@ -164,6 +164,8 @@ group_by(Entity) %>% filter(Entity == "Equatorial Guinea")
 data_malaria_rep_sao_tome <- data_malaria_mid_afr_vgl %>%
 group_by(Entity) %>% filter(Entity == "Sao Tome and Principe")
 ```
+
+**Graph V1**
 
 ```{r}
 library(gridExtra)
@@ -252,6 +254,8 @@ grid.arrange(plot_1, plot_2, plot_3, plot_4, plot_5, plot_6, plot_7, plot_8, plo
 
 ```
 
+**Graph V2**
+
 ```{r}
 plot_11 <- ggplot(data = data_malaria_angola,
        aes(x = Year,
@@ -337,9 +341,7 @@ plot_91 <- ggplot(data = data_malaria_rep_sao_tome,
 grid.arrange(plot_11, plot_21, plot_31, plot_41, plot_51, plot_61, plot_71, plot_81, plot_91, ncol = 3)
 ```
 
-Die Veränderung des
-
-## f)
+Die Graphenstruktur der Länder Angola, Kamerun und Kongo ähnelt sich stark. Der Graph der zentralafrikanischen Republik besitzt eine ähnliche Struktur, allerdings gleichen sich die anderen 3 deutlich mehr. Wichtig ist zu beachten, dass die absolute Anzahl der Toten von Land zu Land stark variiert, aber eben aufgrund des Vergleiches von Jahr zu Jahr innerhalb eines Landes die Graphenstruktur trotzdem als Bewertungskriterium von Trendparallelen gesehen werden kann. Dieses Kriterium ist sozusagen relativ. Allen gemeinsam ist ein beinahe kontinuierlicher Anstieg der Malariatoten bis hin zum Jahr 2005. Dies lässt sich an beiden Graphen ablesen. Bei Graph V1 wird die dies durch Datenpunkte oberhalb der x-Achse gekennzeichnet. Von 2005 bis ca. 2010 wird die Anzahl der Malariatoten jeweils im Vergleich zum Vorjahr immer geringer. Es liegt also ein negativer Trend vor und die Punkte beim jeweiligen Graph V1 liegen unterhalb der x-Achse. Ab 2010 flachen die jeweiligen Kurven von Angola, Kamerun und Kongo in V2 ab und weisen ab einem gewissen Zeitpunkt beinahe keine Änderung mehr an, sprich die Anzahl an Toten bleibt gleich. Diese Gleichheit ist insofern relativ, als dass
 
 ```{r}
 ggplot(data = data_malaria_mid_afr,
