@@ -252,6 +252,95 @@ grid.arrange(plot_1, plot_2, plot_3, plot_4, plot_5, plot_6, plot_7, plot_8, plo
 
 ```
 
+```{r}
+plot_11 <- ggplot(data = data_malaria_angola,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.))+
+  geom_point() +
+  geom_line()+
+  labs(title = "Angola",
+       x = "Jahr",
+       y = "Änderung"
+       )
+plot_21 <- ggplot(data = data_malaria_gabon,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.))+
+  geom_point()+
+  geom_line()+
+  labs(title = "Gabon",
+       x = "Jahr",
+       y = "Änderung"
+       )
+plot_31 <- ggplot(data = data_malaria_cameroon,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.))+
+  geom_point()+
+  geom_line()+
+  labs(title = "Cameroon",
+       x = "Jahr",
+       y = "Änderung"
+       )
+plot_41 <- ggplot(data = data_malaria_ctr_rep,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.))+
+  geom_point()+
+  geom_line()+
+  labs(title = "Central African Republic",
+       x = "Jahr",
+       y = "Änderung"
+       )
+plot_51 <- ggplot(data = data_malaria_chad,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.))+
+  geom_point()+
+  geom_line()+
+  labs(title = "Chad",
+       x = "Jahr",
+       y = "Änderung"
+       )
+plot_61 <- ggplot(data = data_malaria_congo,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.))+
+  geom_point()+
+  geom_line()+
+  labs(title = "Congo",
+       x = "Jahr",
+       y = "Änderung"
+       )
+plot_71 <- ggplot(data = data_malaria_rep_congo,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.))+
+  geom_point()+
+  geom_line()+
+  labs(title = "Democratic Republic Congo",
+       x = "Jahr",
+       y = "Änderung"
+       )
+plot_81 <- ggplot(data = data_malaria_rep_eq_guinea,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.))+
+  geom_point()+
+  geom_line()+
+  labs(title = "Equitorial Guinea",
+       x = "Jahr",
+       y = "Änderung"
+       )
+plot_91 <- ggplot(data = data_malaria_rep_sao_tome,
+       aes(x = Year,
+           y = Deaths.from.malaria..IHME.2016.))+
+  geom_point()+
+  geom_line()+
+  labs(title = "Sao Tome and Principe",
+       x = "Jahr",
+       y = "Änderung"
+       )
+grid.arrange(plot_11, plot_21, plot_31, plot_41, plot_51, plot_61, plot_71, plot_81, plot_91, ncol = 3)
+```
+
+Angola: Die Anzahl an Malaria-Toten in Angola besitzt bis ins Jahr 2000 einen (ungefähr linear-) positiven Trend. Bis zum Jahr 2005 bleibt dieser positiv, ab 2006 wird dieser negativ. Im Jahr 2013 ist die Änderung nocheinmal positiv im Vergleich zum Vorjahr. Ab 2014 ist die Änderungsrate beinahe 0.
+
+Gabon: Die Graphen von Gabon sind insofern interessant, als dass
+
 ## f)
 
 ```{r}
