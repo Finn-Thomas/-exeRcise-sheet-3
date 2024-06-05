@@ -170,39 +170,84 @@ library(gridExtra)
 plot_1 <- ggplot(data = data_malaria_angola,
        aes(x = Year,
            y = Aenderung))+
-  geom_point()
+  geom_point() +
+  geom_line()+
+  labs(title = "Angola",
+       x = "Jahr",
+       y = "Änderung"
+       )
 plot_2 <- ggplot(data = data_malaria_gabon,
        aes(x = Year,
            y = Aenderung))+
-  geom_point()
+  geom_point()+
+  geom_line()+
+  labs(title = "Gabon",
+       x = "Jahr",
+       y = "Änderung"
+       )
 plot_3 <- ggplot(data = data_malaria_cameroon,
        aes(x = Year,
            y = Aenderung))+
-  geom_point()
+  geom_point()+
+  geom_line()+
+  labs(title = "Cameroon",
+       x = "Jahr",
+       y = "Änderung"
+       )
 plot_4 <- ggplot(data = data_malaria_ctr_rep,
        aes(x = Year,
            y = Aenderung))+
-  geom_point()
+  geom_point()+
+  geom_line()+
+  labs(title = "Central African Republic",
+       x = "Jahr",
+       y = "Änderung"
+       )
 plot_5 <- ggplot(data = data_malaria_chad,
        aes(x = Year,
            y = Aenderung))+
-  geom_point()
+  geom_point()+
+  geom_line()+
+  labs(title = "Chad",
+       x = "Jahr",
+       y = "Änderung"
+       )
 plot_6 <- ggplot(data = data_malaria_congo,
        aes(x = Year,
            y = Aenderung))+
-  geom_point()
+  geom_point()+
+  geom_line()+
+  labs(title = "Congo",
+       x = "Jahr",
+       y = "Änderung"
+       )
 plot_7 <- ggplot(data = data_malaria_rep_congo,
        aes(x = Year,
            y = Aenderung))+
-  geom_point()
+  geom_point()+
+  geom_line()+
+  labs(title = "Democratic Republic Congo",
+       x = "Jahr",
+       y = "Änderung"
+       )
 plot_8 <- ggplot(data = data_malaria_rep_eq_guinea,
        aes(x = Year,
            y = Aenderung))+
-  geom_point()
+  geom_point()+
+  geom_line()+
+  labs(title = "Equitorial Guinea",
+       x = "Jahr",
+       y = "Änderung"
+       )
 plot_9 <- ggplot(data = data_malaria_rep_sao_tome,
        aes(x = Year,
            y = Aenderung))+
-  geom_point()
+  geom_point()+
+  geom_line()+
+  labs(title = "Sao Tome and Principe",
+       x = "Jahr",
+       y = "Änderung"
+       )
 grid.arrange(plot_1, plot_2, plot_3, plot_4, plot_5, plot_6, plot_7, plot_8, plot_9, ncol = 3)
 
 ```
@@ -216,6 +261,12 @@ ggplot(data = data_malaria_mid_afr,
        aes(x = Year,
            y = Deaths.from.malaria..IHME.2016.,
        color = Entity) )+
-  geom_point()
+  geom_point() +
+geom_line() + 
+  labs(title = "Malaria-Deaths in Central African Countries (2000-2016)",
+       x = "Year",
+       y = "Absolut Deaths from Malaria (IHME 2016)",
+       color = "Country") +
+  theme_minimal() 
 
 ```
