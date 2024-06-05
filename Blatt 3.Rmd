@@ -337,9 +337,7 @@ plot_91 <- ggplot(data = data_malaria_rep_sao_tome,
 grid.arrange(plot_11, plot_21, plot_31, plot_41, plot_51, plot_61, plot_71, plot_81, plot_91, ncol = 3)
 ```
 
-Angola: Die Anzahl an Malaria-Toten in Angola besitzt bis ins Jahr 2000 einen (ungefähr linear-) positiven Trend. Bis zum Jahr 2005 bleibt dieser positiv, ab 2006 wird dieser negativ. Im Jahr 2013 ist die Änderung nocheinmal positiv im Vergleich zum Vorjahr. Ab 2014 ist die Änderungsrate beinahe 0.
-
-Gabon:
+Die Veränderung des
 
 ## f)
 
