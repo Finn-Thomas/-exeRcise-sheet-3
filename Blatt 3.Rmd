@@ -141,7 +141,6 @@ data_malaria_mid_afr <- data_malaria %>% filter(Entity %in% c("Angola", "Gabon",
 ```{r}
 data_malaria_mid_afr_vgl <- data_malaria_mid_afr %>% group_by(Entity) %>%
   mutate(Aenderung = Deaths.from.malaria..IHME.2016. - lag(Deaths.from.malaria..IHME.2016.))
-kable(data_malaria_mid_afr_vgl)
 ```
 
 ```{r}
@@ -354,7 +353,9 @@ Bei Betrachtung der Graphen V2 von Tschad und Equatorial Guinea fallen ebenfalls
 
 Der Graph V1 von Gabon besitzt wenige Ähnlichkeiten mit denen der anderen Länder. Es gibt beinahe kein Jahr in der es keine Änderung gibt. Zuerst liegt ein positiver Trend vor, welcher von einem stark negativen Trend abgelöst wird. Auf diesen folgt wieder ein positiver und auf diesen wieder ein negativer. Nur im Jahr 2016 ist die relative Änderungsrate beinahe 0.
 
-Der Graph der demokratischen Republik Kongo besteht bis auf das Jahr 2016
+Der Graph der demokratischen Republik Kongo besitzt einen beinahe linear-positiven Trend bis 2008 und danach einen ebenfalls approximativ linearen, allerdings steileren und negativen Trend bis ins Jahr 2015. Im Jahr 2016 ist die Änderungsrate beinahe 0.
+
+## f)
 
 ```{r}
 ggplot(data = data_malaria_mid_afr,
