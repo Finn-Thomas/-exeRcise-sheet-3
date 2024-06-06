@@ -433,7 +433,7 @@ plot_911 <- ggplot(data = data_malaria_rep_sao_tome,
 grid.arrange(plot_111, plot_211, plot_311, plot_411, plot_511, plot_611, plot_711, plot_811, plot_911, ncol = 3)
 ```
 
-Die relative Änderung liegt in tabellarischer Form vor. Wird sich im folgenden Text darauf bezogen, dann steht das in Einklang mit den Werten der Tabelle. Weiterhin sind die Werte geschätzt, da es in einigen Fällen keine eindeutige Quelle aller Malariafälle gibt. Deshalb werden zur Schätzung komplexere Modelle und verschiedene Quellen verwendet, die Anzahl ist also nie exakt, sollte aber nahe an den tatsächlichen Todesfällen dran sein.
+Die relative Änderung liegt in tabellarischer Form vor. Wird sich im folgenden Text darauf bezogen, dann steht das in Einklang mit den Werten der Tabelle. Weiterhin sind die Werte geschätzt, da es in einigen Fällen keine eindeutige Quelle aller Malariafälle gibt. Deshalb werden zur Schätzung komplexere Modelle und verschiedene Quellen verwendet, die Anzahl ist also nie exakt, sollte aber nahe an den tatsächlichen Todesfällen dran sein. Deswegen besitzen die Werte auch Nachkommastellen.
 
 Die Graphenstruktur der Länder Angola, Kamerun und Kongo ähnelt sich stark. Der Graph der zentralafrikanischen Republik besitzt eine ähnliche Struktur, allerdings gleichen sich die anderen 3 deutlich mehr. Wichtig ist zu beachten, dass die absolute Anzahl der Toten von Land zu Land stark variiert. Dies kann an demographischen Faktoren wie der Bevölkerungsanzahl liegen. Aufgrund des Vergleiches von Jahr zu Jahr innerhalb eines Landes kann die Graphenstruktur trotzdem als Bewertungskriterium von Trendparallelen herangezogen werden. Die Graphenstruktur impliziert Parallelen und Ähnlichkeiten bei der relativen Änderung . Allen gemeinsam ist ein beinahe kontinuierlicher Anstieg der Malariatoten bis hin zum Jahr 2005. Dies lässt sich an beiden Graphen ablesen. Bei Graphen V1 wird dies durch Datenpunkte oberhalb der x-Achse gekennzeichnet. Von 2005 bis ca. 2010 wird die Anzahl der Malariatoten jeweils im Vergleich zum Vorjahr immer geringer. Es liegt also ein negativer Trend vor und die Punkte beim jeweiligen Graph V1 liegen unterhalb der x-Achse. Ab 2010 flachen die jeweiligen Kurven von Angola, Kamerun und Kongo in V2 ab und weisen ab einem gewissen Zeitpunkt beinahe keine Änderung mehr an, sprich die Anzahl an Toten bleibt beinahe gleich (relativ). Bei der zentralafrikanischen Republik hingegen ist bis in das Jahr 2016 ein negativer Trend zu beobachten.
 
@@ -450,6 +450,10 @@ Es gibt allerdings ein paar Gemeinsamkeiten bei allen Graphen, welche nocheinmal
 -   Bei allen Ländern (ausgenommen sind Demok. Rep. Kongo und Gabon) stellt Jahr 2005 (+/- 2 Jahre) einen Wechsel im Verlauf des Graphen dar. Auf eine längere Periode positiven Wachstums der Toten, folgt nun ein kürzerer Abschnitt mit negativer Steigung. Daraus lässt sich folgern, dass ca. im Jahr 2005 Ereignisse stattfanden, welche zu einer Abnahme der Malariatoten in den meisten zentralafrikanischen Ländern führten.
 
 -   Bei fast allen Ländern folgt auf diese Abnahme eine Zeit der Stagnation bzw. geringen positiven/negativen Wachstums der Anzahl an Malariatoten
+
+Abschließend lässt sich also feststellen, dass es durchaus Parallelen in den Trends gibt, welche darauf deuten, dass es strukturelle oder geographische Similaritäten in der Region gibt.
+
+### f)
 
 ```{r}
 ggplot(data = data_malaria_mid_afr,
