@@ -441,7 +441,9 @@ Der Graph V1 von Gabon besitzt wenige Ähnlichkeiten mit denen der anderen Länd
 
 Der Graph der demokratischen Republik Kongo besitzt einen beinahe linear-positiven Trend bis 2008 und danach einen ebenfalls approximativ linearen, allerdings steileren und negativen Trend bis ins Jahr 2015. Im Jahr 2016 ist die Änderungsrate beinahe 0.
 
-Diw Graphen von Sao Tome und Principe sind vermutlich der interessantesten der Liste.
+Die Graphen von Sao Tome und Principe sind vermutlich der interessantesten der Liste. Hier ist es wichtig statt den Graphen die Tabelle zu betrachten. Denn die Vorhersage für Malariatote pro 100000 ist deutlich geringer als bei den anderen Staaten. Dadurch fällt bereits ein einziger weiterer Toter pro 100000 stark ins Gewicht. Dadurch erscheint der Graph beispielsweise von 1990 bis 1994 mit der absoluten Änderungsrate keinen Trend zu besitzen, obwohl die Tabellenwerte der relative Veränderung einen im Vergleich zu anderen Ländern recht hoch ist. Mit einer relativen Veränderung von über 40 im Jahr 1996
+
+### f)
 
 ```{r}
 ggplot(data = data_malaria_mid_afr,
