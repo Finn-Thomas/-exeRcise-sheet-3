@@ -35,6 +35,12 @@ library(kableExtra)
 
 -   *Leistung*: Besonders große Projekte mit vielen Dateien und Datenverzweigungen können bei Git Leistungsprobleme hervorrufen. Gerade bei älteren Computern macht sich das dann in der allgemeinen Performance der aktiven Programme zu bemerken und kann eventuell zu Abstürzen führen. Des weiteren kann Git nicht im Hintergrund laufen, was ebenfalls mehr Arbeitsspeicher erfordern kann.
 
+## 2)
+
+### a)
+
+<https://github.com/Finn-Thomas/-exeRcise-sheet-3>
+
 ## 3)
 
 ```{r}
