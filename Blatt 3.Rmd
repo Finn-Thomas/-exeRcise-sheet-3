@@ -114,7 +114,7 @@ Link: [https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deat
 
 ### d)
 
-**Frage: Wie verhält sich die Entwicklung der Malariatoten in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre von 1990- 2016 und gibt es Ähnlichkeiten innerhalb dieser Länder?**
+**Frage: Wie verhält sich die Entwicklung der absoluten Anzahl an Malariatoten in zentralafrikanischen Ländern im Laufe der Jahre von 1990-2016 und gibt es Ähnlichkeiten bei der Entwicklung innerhalb dieser Länder?**
 
 ### e)
 
@@ -455,6 +455,8 @@ Es gibt allerdings ein paar Gemeinsamkeiten bei allen Graphen, welche nocheinmal
 -   Bei fast allen Ländern folgt auf diese Abnahme eine Zeit der Stagnation bzw. geringen positiven/negativen Wachstums der Anzahl an Malariatoten
 
 Abschließend lässt sich also feststellen, dass es durchaus Parallelen in den Trends gibt, welche darauf deuten, dass es strukturelle oder geographische Similaritäten in der Region bzw. zwischen verschiedenen Ländern gibt.
+
+Anmerkung: In diesem Datensatz befinden sich nur absolute Werte. Da zentralafrikanische Länder in der Regel eine hohe Geburtsrate besitzen, führen negative oder neutrale/keine Änderung der absoluten Zahlen zu einer Verringerung der relativen Sterberate. Dadurch wäre eine relative Sterberate aussagekräftiger einen Trend zu beschreiben. Allerdings gibt es innerhalb dieses Datensatzes keinen Zugriff auf die jährliche Bevölkerungszahl.
 
 ### f)
 
