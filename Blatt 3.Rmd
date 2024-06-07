@@ -456,7 +456,7 @@ Es gibt allerdings ein paar Gemeinsamkeiten bei allen Graphen, welche nocheinmal
 
 Abschließend lässt sich also feststellen, dass es durchaus Parallelen in den Trends gibt, welche darauf deuten, dass es strukturelle oder geographische Similaritäten in der Region bzw. zwischen verschiedenen Ländern gibt.
 
-Anmerkung: In diesem Datensatz befinden sich nur absolute Werte. Da zentralafrikanische Länder in der Regel eine hohe Geburtsrate besitzen, führen negative oder neutrale/keine Änderung der absoluten Zahlen zu einer Verringerung der relativen Sterberate. Dadurch wäre eine relative Sterberate aussagekräftiger einen Trend zu beschreiben. Allerdings gibt es innerhalb dieses Datensatzes keinen Zugriff auf die jährliche Bevölkerungszahl.
+*Anmerkung:* In diesem Datensatz befinden sich nur absolute Werte. Da zentralafrikanische Länder in der Regel eine hohe Geburtsrate besitzen, führen negative oder neutrale/keine Änderung der absoluten Zahlen zu einer Verringerung der relativen Sterberate. Dadurch wäre eine relative Sterberate aussagekräftiger einen Trend zu beschreiben. Allerdings gibt es innerhalb dieses Datensatzes keinen Zugriff auf die jährliche Bevölkerungszahl.
 
 ### f)
 
