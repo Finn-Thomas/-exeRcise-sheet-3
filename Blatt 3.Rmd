@@ -173,9 +173,7 @@ data_malaria_rep_sao_tome <- data_malaria_mid_afr_vgl %>%
 group_by(Entity) %>% filter(Entity == "Sao Tome and Principe")
 ```
 
-**Graph V1: Absolute Änderung der Malariatoten von Jahr zu Jahr (1990-2016)**
-
-```{r}
+```{r abs-aenderung-malaria, fig.cap="Absolute Änderung der Malariatoten von Jahr zu Jahr (1990-2016)"}
 library(gridExtra)
 plot_1 <- ggplot(data = data_malaria_angola,
        aes(x = Year,
@@ -262,9 +260,7 @@ grid.arrange(plot_1, plot_2, plot_3, plot_4, plot_5, plot_6, plot_7, plot_8, plo
 
 ```
 
-**Graph V2: Absolute Anzahl der Malariatoten in den Jahren 1990-2016**
-
-```{r}
+```{r abs-anzahl-tote-malaria, fig.cap="Absolute Anzahl der Malariatoten in den Jahren 1990-2016"}
 plot_11 <- ggplot(data = data_malaria_angola,
        aes(x = Year,
            y = Deaths.from.malaria..IHME.2016.))+
@@ -349,9 +345,7 @@ plot_91 <- ggplot(data = data_malaria_rep_sao_tome,
 grid.arrange(plot_11, plot_21, plot_31, plot_41, plot_51, plot_61, plot_71, plot_81, plot_91, ncol = 3)
 ```
 
-**Graph V3: Relative Änderung der Malariatoten von Jahr zu Jahr (1990-2016)**
-
-```{r}
+```{r rel-aenderung-malaria, fig.cap="Relative Änderung der Malariatoten von Jahr zu Jahr (1990-2016)"}
 plot_111 <- ggplot(data = data_malaria_angola,
        aes(x = Year,
            y = rel_Aenderung))+
@@ -438,15 +432,15 @@ grid.arrange(plot_111, plot_211, plot_311, plot_411, plot_511, plot_611, plot_71
 
 Die relative Änderung liegt in tabellarischer Form vor. Wird sich im folgenden Text darauf bezogen, dann steht das in Einklang mit den Werten der Tabelle. Weiterhin sind die Werte geschätzt, da es in einigen Fällen keine eindeutige Quelle aller Malariafälle gibt. Deshalb werden zur Schätzung komplexere Modelle und verschiedene Quellen verwendet, die Anzahl ist also nie exakt, sollte aber nahe an den tatsächlichen Todesfällen dran sein. Deswegen besitzen die Werte auch Nachkommastellen.
 
-Die Graphenstruktur der Länder Angola, Kamerun und Kongo ähnelt sich stark. Der Graph der zentralafrikanischen Republik besitzt eine ähnliche Struktur, allerdings gleichen sich die anderen 3 deutlich mehr. Wichtig ist zu beachten, dass die absolute Anzahl der Toten von Land zu Land stark variiert. Dies kann an demographischen Faktoren wie der Bevölkerungsanzahl liegen. Aufgrund des Vergleiches von Jahr zu Jahr innerhalb eines Landes kann die Graphenstruktur trotzdem als Bewertungskriterium von Trendparallelen herangezogen werden. Die Graphenstruktur impliziert Parallelen und Ähnlichkeiten bei der relativen Änderung . Allen gemeinsam ist ein beinahe kontinuierlicher Anstieg der Malariatoten bis hin zum Jahr 2005. Dies lässt sich an beiden Graphen ablesen. Bei Graphen V1 wird dies durch Datenpunkte oberhalb der x-Achse gekennzeichnet. Von 2005 bis ca. 2010 wird die Anzahl der Malariatoten jeweils im Vergleich zum Vorjahr immer geringer. Es liegt also ein negativer Trend vor und die Punkte beim jeweiligen Graph V1 liegen unterhalb der x-Achse. Ab 2010 flachen die jeweiligen Kurven von Angola, Kamerun und Kongo in V2 ab und weisen ab einem gewissen Zeitpunkt beinahe keine Änderung mehr an, sprich die Anzahl an Toten bleibt beinahe gleich (relativ). Bei der zentralafrikanischen Republik hingegen ist bis in das Jahr 2016 ein negativer Trend zu beobachten.
+Die Graphenstruktur der Länder Angola, Kamerun und Kongo ähnelt sich stark. Der Graph der zentralafrikanischen Republik besitzt eine ähnliche Struktur, allerdings gleichen sich die anderen 3 deutlich mehr. Wichtig ist zu beachten, dass die absolute Anzahl der Toten von Land zu Land stark variiert. Dies kann an demographischen Faktoren wie der Bevölkerungsanzahl liegen. Aufgrund des Vergleiches von Jahr zu Jahr innerhalb eines Landes kann die Graphenstruktur trotzdem als Bewertungskriterium von Trendparallelen herangezogen werden. Die Graphenstruktur impliziert Parallelen und Ähnlichkeiten bei der relativen Änderung . Allen gemeinsam ist ein beinahe kontinuierlicher Anstieg der Malariatoten bis hin zum Jahr 2005. Dies lässt sich an beiden Graphen ablesen. Bei Figure \@ref(fig:abs-aenderung-malaria) wird dies durch Datenpunkte oberhalb der x-Achse gekennzeichnet. Von 2005 bis ca. 2010 wird die Anzahl der Malariatoten jeweils im Vergleich zum Vorjahr immer geringer. Es liegt also ein negativer Trend vor und die Punkte beim jeweiligen Figure \@ref(fig:abs-aenderung-malaria) liegen unterhalb der x-Achse. Ab 2010 flachen die jeweiligen Kurven von Angola, Kamerun und Kongo in Figure \@ref(fig:abs-anzahl-tote-malaria) ab und weisen ab einem gewissen Zeitpunkt beinahe keine Änderung mehr an, sprich die Anzahl an Toten bleibt beinahe gleich (relativ). Bei der zentralafrikanischen Republik hingegen ist bis in das Jahr 2016 ein negativer Trend zu beobachten.
 
-Bei Betrachtung der Graphen V2 von Tschad und Equatorial Guinea fallen ebenfalls Parallelen auf. Beide Graphen besitzen anfangs einen positiven Trend, welcher ab 2007 (Tschad) bzw. 2005 (Guinea) negativ wird. Nach einer kurzen Negativphase liegen bei beiden Ländern entweder Phasen ohne bzw. mit sehr geringer Änderung vor oder Phasen, die ungefähr um die (pro Land) erst eine positive Änderung und kurz darauf (sprich innerhalb der nächsten 1-2 Jahre) eine beinahe genauso großen negative Änderung aufweisen.
+Bei Betrachtung der Figure \@ref(fig:abs-anzahl-tote-malaria) von Tschad und Equatorial Guinea fallen ebenfalls Parallelen auf. Beide Graphen besitzen anfangs einen positiven Trend, welcher ab 2007 (Tschad) bzw. 2005 (Guinea) negativ wird. Nach einer kurzen Negativphase liegen bei beiden Ländern entweder Phasen ohne bzw. mit sehr geringer Änderung vor oder Phasen, die ungefähr um die (pro Land) erst eine positive Änderung und kurz darauf (sprich innerhalb der nächsten 1-2 Jahre) eine beinahe genauso großen negative Änderung aufweisen.
 
-Der Graph V1 von Gabon besitzt wenige Ähnlichkeiten mit denen der anderen Länder. Es gibt beinahe kein Jahr in der es keine Änderung gibt. Zuerst liegt ein positiver Trend vor, welcher von einem stark negativen Trend abgelöst wird. Auf diesen folgt wieder ein positiver und auf diesen wieder ein negativer. Nur im Jahr 2016 ist die relative Änderungsrate sehr nahe an 0, also liegt kein Trend vor.
+Der Graph \@ref(fig:abs-aenderung-malaria) von Gabon besitzt wenige Ähnlichkeiten mit denen der anderen Länder. Es gibt beinahe kein Jahr in der es keine Änderung gibt. Zuerst liegt ein positiver Trend vor, welcher von einem stark negativen Trend abgelöst wird. Auf diesen folgt wieder ein positiver und auf diesen wieder ein negativer. Nur im Jahr 2016 ist die relative Änderungsrate sehr nahe an 0, also liegt kein Trend vor.
 
-Der Graph der demokratischen Republik Kongo besitzt einen beinahe linear-positiven Trend bis 2008 und danach einen ebenfalls approximativ linearen, allerdings steileren und negativen Trend bis ins Jahr 2015. Im Jahr 2016 ist die Änderungsrate beinahe 0.
+Der Graph der demokratischen Republik Kongo \@ref(fig:abs-anzahl-tote-malaria) besitzt einen beinahe linear-positiven Trend bis 2008 und danach einen ebenfalls approximativ linearen, allerdings steileren und negativen Trend bis ins Jahr 2015. Im Jahr 2016 ist die (relative) Änderungsrate beinahe 0 \@ref(fig:rel-aenderung-malaria).
 
-Die Graphen von Sao Tome und Principe sind vermutlich der interessantesten der Liste. Hier ist es wichtig statt den Graphen die Tabelle zu betrachten. Denn die Vorhersage für Malariatote pro 100000 ist deutlich geringer als bei den anderen Staaten. Dadurch fällt bereits ein einziger weiterer Toter pro 100000 stark ins Gewicht. Dadurch erscheint der Graph beispielsweise von 1990 bis 1994 mit der absoluten Änderungsrate keinen Trend zu besitzen, obwohl die Tabellenwerte der relative Veränderung einen im Vergleich zu anderen Ländern recht hoch ist. Mit einer relativen Veränderung von über 40 im Jahr 1996 wird bis ins Jahr 2006 anhaltender Verlauf mit hauptsächlich kurzen Phasen von positiven und negativen Änderungen eingeleitet (siehe Graph V2). Ab dem Jahr 2006 werden die relativen Änderungen immer geringer bis diese 2013, 2015 und 2016 besonders nahe an 0 sind. Die Schätzungen für Sao Tome und Principe unterscheidet sich damit ebenfalls von den der anderen Länder.
+Die Graphen von Sao Tome und Principe sind vermutlich der interessantesten der Liste. Hier ist es wichtig statt den Graphen die Tabelle zu betrachten. Denn die Vorhersage für Malariatote pro 100000 ist deutlich geringer als bei den anderen Staaten. Dadurch fällt bereits ein einziger weiterer Toter pro 100000 stark ins Gewicht. Dadurch erscheint der Graph beispielsweise von 1990 bis 1994 mit der absoluten Änderungsrate keinen Trend zu besitzen, obwohl die Tabellenwerte der relative Veränderung einen im Vergleich zu anderen Ländern recht hoch ist. Mit einer relativen Veränderung von über 40 im Jahr 1996 wird bis ins Jahr 2006 anhaltender Verlauf mit hauptsächlich kurzen Phasen von positiven und negativen Änderungen eingeleitet (siehe \@ref(fig:abs-anzahl-tote-malaria). Ab dem Jahr 2006 werden die relativen Änderungen immer geringer bis diese 2013, 2015 und 2016 besonders nahe an 0 sind. Die Schätzungen für Sao Tome und Principe unterscheidet sich damit ebenfalls von den der anderen Länder.
 
 Es gibt allerdings ein paar Gemeinsamkeiten bei allen Graphen, welche nocheinmal kurz hervorgehoben werden sollen:
 
