@@ -465,7 +465,7 @@ ggplot(data = data_malaria_mid_afr,
        color = Entity) )+
   geom_point() +
 geom_line() + 
-  labs(title = "Malaria-Deaths in Central African Countries (2000-2016)",
+  labs(title = "Malaria-Deaths in Central African Countries (1990-2016)",
        x = "Year",
        y = "Absolut Deaths from Malaria (IHME 2016)",
        color = "Country") +
