@@ -114,7 +114,7 @@ Link: [https://github.com/owid/owid-datasets/tree/master/datasets/Malaria%20deat
 
 ### d)
 
-**Frage: Wie verhält sich der Trend bei Malariatoten (absolut) in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre von 1990- 2016 und gibt es Ähnlichkeiten?**
+**Frage: Wie verhält sich die Entwicklung der Malariatoten in zentralafrikanischen Ländern (pro Land) im Laufe der Jahre von 1990- 2016 und gibt es Ähnlichkeiten innerhalb dieser Länder?**
 
 ### e)
 
